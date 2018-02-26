@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-void swap(int a, int b);
+void swap(int *a, int *b);
 
 int main()
 {
@@ -17,18 +17,19 @@ int main()
     printf("the content of x = %d\n", *px);
     printf("the content of y = %d\n\n", *py);
 
+    // using the swap function
     printf("main: x = %d; y = %d\n", x, y);
-    swap(x, y);
+    swap(&x, &y);
     printf("main: x = %d; y = %d\n", x, y);
     return 0;
 }
 
-void swap(int a, int b)
+void swap(int *a, int *b)
 {
     int tmp;
-    printf("swap: a = %d; b = %d\n", a, b);
-    tmp = a;
-    a = b;
-    b = tmp;
-    printf("swap: a = %d; b = %d\n", a, b);
+    printf("swap: a = %d; b = %d\n", *a, *b);
+    tmp = *a;
+    *a = *b;
+    *b = tmp;
+    printf("swap: a = %d; b = %d\n", *a, *b);
 }
