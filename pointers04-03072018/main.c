@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <time.h>
 
 void transposeMatrix(int nr, int nc, int** x, int** xt);
 
@@ -10,6 +11,7 @@ int main()
 
     int nr, nc, i, j;
     nr = 3; nc = 4;
+    srand(time(0));
 
     // Auxiliary array to store int* pointers
     x = (int**) malloc(nr*sizeof(int*));
@@ -36,6 +38,7 @@ int main()
     {
         free(x[i]);
     }
+    free(x);
 
     return 0;
 }
@@ -71,4 +74,5 @@ void transposeMatrix(int nr, int nc, int** x, int** xt)
     {
         free(xt[i]);
     }
+    free(xt);
 }
