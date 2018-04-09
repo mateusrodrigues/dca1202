@@ -8,6 +8,7 @@ int main()
     Engine m;
     m.setMake("ACME");
     m.setPrice(23.45);
+    m.Equipment::setPrice(21.35);
     m.setName("Speedatron");
     m.setPower(130);
     m.setSpeed(280);

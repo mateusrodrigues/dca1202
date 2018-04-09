@@ -8,6 +8,7 @@ class Equipment
     float price;
 public:
     Equipment();
+    ~Equipment();
     void setName(const char *_name);
     void setMake(const char *_make);
     void setPrice(float _price);

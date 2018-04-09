@@ -1,9 +1,17 @@
 #include <cstring>
+#include <iostream>
 #include "equipment.h"
+
+using namespace std;
 
 Equipment::Equipment()
 {
+    cout << "equipment constructor" << endl;
+}
 
+Equipment::~Equipment()
+{
+    cout << "equipment destructor" << endl;
 }
 
 void Equipment::setName(const char *_name)

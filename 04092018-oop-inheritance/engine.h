@@ -9,6 +9,8 @@ class Engine : public Equipment
     float speed;
 public:
     Engine();
+    ~Engine();
+    void setPrice(float _price);
     void setPower(float _power);
     void setSpeed(float _speed);
     float getPower(void);

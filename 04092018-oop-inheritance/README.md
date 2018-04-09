@@ -41,3 +41,9 @@ public:
     float getSpeed(void);
 };
 ```
+
+### Access Modifiers
+
+- **public**: the member can be access from anywhere, including the outside of the class.
+- **private**: the member can only be accessed from within the class.
+- **protected**: the member can only be accessed from within its class or any other class that inherits from it.
