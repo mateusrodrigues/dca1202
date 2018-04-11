@@ -47,3 +47,7 @@ public:
 - **public**: the member can be access from anywhere, including the outside of the class.
 - **private**: the member can only be accessed from within the class.
 - **protected**: the member can only be accessed from within its class or any other class that inherits from it.
+
+### Variable Attribution
+
+If variable `a` belongs to class **A** and another variable `b` to class **B**, the attribution `a = b` is possible if, and only if, **B** is a subclass of **A**.
