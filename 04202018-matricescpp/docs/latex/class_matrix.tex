@@ -1,0 +1,93 @@
+\hypertarget{class_matrix}{}\section{Matrix Class Reference}
+\label{class_matrix}\index{Matrix@{Matrix}}
+
+
+The \hyperlink{class_matrix}{Matrix} class does mathematical operations between matrices of type float.  
+
+
+
+
+{\ttfamily \#include $<$matrix.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_matrix_ad46ac5e001ada4438e5f74c5eccdac2f}{Matrix} (int \+\_\+nl=0, int \+\_\+nc=0)
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_matrix}{Matrix} is a class constructor. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_matrix_af4c99503d4e4b31c5e73eceef9c7e1d0}\label{class_matrix_af4c99503d4e4b31c5e73eceef9c7e1d0}} 
+{\bfseries Matrix} (\hyperlink{class_matrix}{Matrix} \&m)
+\item 
+\hyperlink{class_matrix}{Matrix} \hyperlink{class_matrix_ac84e74316e8692a18dd704c745970efe}{operator=} (\hyperlink{class_matrix}{Matrix} \&m)
+\begin{DoxyCompactList}\small\item\em operator = copies the state of the given matrix to the current object \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_matrix_aa5b57ec3e95f139595d74b9a70e2e75a}\label{class_matrix_aa5b57ec3e95f139595d74b9a70e2e75a}} 
+\hyperlink{class_matrix}{Matrix} {\bfseries operator+} (\hyperlink{class_matrix}{Matrix} \&m)
+\item 
+\mbox{\Hypertarget{class_matrix_afbf1af2ff0e32dcf187c53c2d48cab80}\label{class_matrix_afbf1af2ff0e32dcf187c53c2d48cab80}} 
+float \& {\bfseries operator()} (int i, int j)
+\item 
+\mbox{\Hypertarget{class_matrix_aedd658d81933bec8660e8b22eeb442ca}\label{class_matrix_aedd658d81933bec8660e8b22eeb442ca}} 
+void {\bfseries random} ()
+\item 
+\mbox{\Hypertarget{class_matrix_a99ba97122b8fdd54e95290caf80fc8e2}\label{class_matrix_a99ba97122b8fdd54e95290caf80fc8e2}} 
+void {\bfseries print} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+The \hyperlink{class_matrix}{Matrix} class does mathematical operations between matrices of type float. 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_matrix_ad46ac5e001ada4438e5f74c5eccdac2f}\label{class_matrix_ad46ac5e001ada4438e5f74c5eccdac2f}} 
+\index{Matrix@{Matrix}!Matrix@{Matrix}}
+\index{Matrix@{Matrix}!Matrix@{Matrix}}
+\subsubsection{\texorpdfstring{Matrix()}{Matrix()}}
+{\footnotesize\ttfamily Matrix\+::\+Matrix (\begin{DoxyParamCaption}\item[{int}]{\+\_\+nl = {\ttfamily 0},  }\item[{int}]{\+\_\+nc = {\ttfamily 0} }\end{DoxyParamCaption})}
+
+
+
+\hyperlink{class_matrix}{Matrix} is a class constructor. 
+
+It allocates dynamically a two-\/dimensional array that stores the matrix to be processed. 
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+nl} & is the amount of lines of the array \\
+\hline
+{\em \+\_\+nc} & is the amount of columns of the array 
+\begin{DoxyItemize}
+\item If \+\_\+nl or \+\_\+nc is zero, the matrix will have all its dimensions defined to zero.  
+\item If the dimensions are negative, the program will be terminated.  
+\end{DoxyItemize}\\
+\hline
+\end{DoxyParams}
+\begin{DoxyAuthor}{Author}
+Mateus Rodrigues de Morais 
+\end{DoxyAuthor}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_matrix_ac84e74316e8692a18dd704c745970efe}\label{class_matrix_ac84e74316e8692a18dd704c745970efe}} 
+\index{Matrix@{Matrix}!operator=@{operator=}}
+\index{operator=@{operator=}!Matrix@{Matrix}}
+\subsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily \hyperlink{class_matrix}{Matrix} Matrix\+::operator= (\begin{DoxyParamCaption}\item[{\hyperlink{class_matrix}{Matrix} \&}]{m }\end{DoxyParamCaption})}
+
+
+
+operator = copies the state of the given matrix to the current object 
+
+dynamic memory allocation processes are executed to create a matrix with the same dimensions as the one given and, only then, that matrix is copied over to the current object \[ \int_a^b f(x) dx \] 
+\begin{DoxyParams}{Parameters}
+{\em m} & is the matrix whose state will be copied over \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a matrix that can be used in a chained attribution context 
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Mateus Rodrigues de Morais 
+\end{DoxyAuthor}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+matrix.\+h\item 
+matrix.\+cpp\end{DoxyCompactItemize}
