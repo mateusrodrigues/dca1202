@@ -6,10 +6,13 @@
 class Poligono
 {
 private:
-    Ponto vertices[];
+    int nVertices;
+    Ponto* vertices;
 public:
     Poligono();
     ~Poligono();
+    void addVertice(Ponto p1);
+    void imprimePonto(int n);
 };
 
 #endif // POLIGONO_H
