@@ -1,35 +1,27 @@
 #include <iostream>
-#include "ponto.h"
-#include "poligono.h"
+#include "retangulo.h"
 
 using namespace std;
 
 int main()
 {
-    cout << "Hello World!" << endl;
+    Retangulo ret(0, 0, 3, 4);
+    ret.imprime();
 
-    Ponto a, b;
-    a.setXY(1.54, 2.33);
-    b.setXY(2.33, 5.44);
+    cout << "Área do retângulo: " << ret.getArea()
+         << " (antes da translação)" << endl;
 
-    a.imprime();
-    b.imprime();
+    ret.translada(-3, 4);
 
-    Ponto c;
-    c = a.add(b);
+    cout << "Área do retângulo: " << ret.getArea()
+         << " (após a translação)" << endl;
 
-    c.imprime();
+    Ponto cm;
+    cm.setXY(1.5, 2.0);
+    ret.rotaciona(cm, 30);
 
-    Poligono p;
-    for (int i = 0; i < 100; i++)
-    {
-        p.addVertice(a);
-    }
-
-    p.addVertice(a);
-    p.imprimePonto(0);
-    p.imprimePonto(1);
-    p.imprimePonto(2);
+    cout << "Área do retângulo: " << ret.getArea()
+         << " (após a translação e rotação)" << endl;
 
     return 0;
 }
