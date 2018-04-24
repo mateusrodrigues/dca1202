@@ -7,6 +7,9 @@ class Ponto
 private:
     float x, y;
 public:
+    /**
+     * @brief Ponto é o construtor da classe. Não recebe parâmetros.
+     */
     Ponto();
     /**
      * @brief setX define o valor da coordenada x do ponto

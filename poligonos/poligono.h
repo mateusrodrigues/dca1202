@@ -9,6 +9,9 @@ private:
     int nVertices;
     Ponto vertices[100];
 public:
+    /**
+     * @brief Poligono é o construtor da classe. Não recebe parâmetros.
+     */
     Poligono();
     /**
      * @brief addVertice adiciona um vértice ao polígono
