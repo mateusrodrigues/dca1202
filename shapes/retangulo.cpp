@@ -15,8 +15,9 @@ void Retangulo::draw(Screen &t)
         t.setPixel(origin_x + i, origin_y);
         t.setPixel(origin_x + i, origin_y + height);
     }
-    for (int i = 0; i <= height; i++)
+    for (int i = 1; i <= (height - 1); i++)
     {
-        // TODO: Finish this implementation
+        t.setPixel(origin_x, origin_y + i);
+        t.setPixel(origin_x + width, origin_y + i);
     }
 }
