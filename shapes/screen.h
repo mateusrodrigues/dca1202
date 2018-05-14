@@ -21,7 +21,7 @@ private:
 
 public:
     // construtor da classe
-    Screen(int nlin, int ncol);
+    Screen(int nlin = 1, int ncol = 1);
 
     // desenha um pixel da matriz usando o caratere
     // guardado em 'brush'
