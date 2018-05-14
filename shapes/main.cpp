@@ -68,8 +68,7 @@ int main(int argc, char *argv[])
                 {
                     int x0, y0, radius, fillmode;
                     sstream >> x0 >> y0 >> radius >> fillmode;
-                    bool fill = (fillmode == 0) ? false : true;
-                    shapes.push_back(new Circulo(x0, y0, radius, fill));
+                    shapes.push_back(new Circulo(x0, y0, radius, (fillmode == 0) ? false : true));
                 }
             }
         }
