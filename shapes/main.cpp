@@ -80,6 +80,13 @@ int main(int argc, char *argv[])
         }
 
         cout << t << endl;
+
+        ofstream ofile;
+        ofile.open("./figura.txt");
+
+        ofile << t << endl;
+        ofile.close();
+
         return 0;
     }
 
