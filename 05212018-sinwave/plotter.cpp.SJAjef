@@ -1,0 +1,37 @@
+#include <QPainter>
+#include <QBrush>
+#include <QPen>
+#include <QColor>
+#include "plotter.h"
+
+Plotter::Plotter(QWidget *parent) : QWidget(parent)
+{
+
+}
+
+void Plotter::paintEvent(QPaintEvent *event)
+{
+    QPainter painter(this);
+    QBrush   brush;
+    QPen     pen;
+
+    // set brush to the yellow color by RGB
+    brush.setColor(QColor(255, 255, 100));
+    brush.setStyle(Qt::SolidPattern);
+
+    // pass on the brush created over to the painter
+    painter.setBrush(brush);
+
+    // create a red pen by RGB
+    pen.setColor(QColor(255, 0, 0));
+    pen.setWidth(2);
+
+    // pass on the pen to the painter
+    painter.setPen(pen);
+
+    // fill the component with a rectangle
+    painter.drawRect(0, 0, this->width(), this->height());
+
+    // draw the horizontal x-axis
+    painter.drawLine(0, height()/2.0, width(), height()/2.0);
+}
